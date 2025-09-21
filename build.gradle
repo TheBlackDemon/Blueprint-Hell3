@@ -1,0 +1,132 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// Common dependencies for all modules
+dependencies {
+    implementation 'org.json:json:20231013'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+    implementation 'ch.qos.logback:logback-core:1.4.11'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'io.netty:netty-all:4.1.100.Final'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// Define source sets for different components
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+    
+    client {
+        java {
+            srcDirs = ['src/client/java']
+        }
+        resources {
+            srcDirs = ['src/client/resources']
+        }
+        compileClasspath += main.output
+        runtimeClasspath += main.output
+    }
+    
+    server {
+        java {
+            srcDirs = ['src/server/java']
+        }
+        resources {
+            srcDirs = ['src/server/resources']
+        }
+        compileClasspath += main.output
+        runtimeClasspath += main.output
+    }
+    
+    shared {
+        java {
+            srcDirs = ['src/shared/java']
+        }
+        resources {
+            srcDirs = ['src/shared/resources']
+        }
+    }
+}
+
+// Client configuration
+application {
+    mainClass = 'main.java.client.ClientMain'
+}
+
+// Create separate JARs for client and server
+jar {
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+task clientJar(type: Jar) {
+    from sourceSets.client.output
+    from sourceSets.main.output
+    from sourceSets.shared.output
+    manifest {
+        attributes 'Main-Class': 'main.java.client.ClientMain'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName = 'client'
+}
+
+task serverJar(type: Jar) {
+    from sourceSets.server.output
+    from sourceSets.main.output
+    from sourceSets.shared.output
+    manifest {
+        attributes 'Main-Class': 'main.java.server.ServerMain'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName = 'server'
+}
+
+// Offline game JAR (original game)
+task offlineJar(type: Jar) {
+    from sourceSets.main.output
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName = 'BlueprintHell-5-1.0-SNAPSHOT'
+}
+
+// Build all JARs
+task buildAll {
+    dependsOn clientJar, serverJar, offlineJar
+}

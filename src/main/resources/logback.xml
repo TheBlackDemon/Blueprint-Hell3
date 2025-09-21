@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Console appender for immediate feedback -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for main game log -->
+    <appender name="GAME_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/game.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/game.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for packet-specific events -->
+    <appender name="PACKET_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/packets.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/packets.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for collision events -->
+    <appender name="COLLISION_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/collisions.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/collisions.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>2MB</maxFileSize>
+            <maxHistory>14</maxHistory>
+            <totalSizeCap>50MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for shop events -->
+    <appender name="SHOP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/shop.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/shop.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>2MB</maxFileSize>
+            <maxHistory>14</maxHistory>
+            <totalSizeCap>50MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for system events -->
+    <appender name="SYSTEM_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/systems.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/systems.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>3MB</maxFileSize>
+            <maxHistory>14</maxHistory>
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for level progression -->
+    <appender name="LEVEL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/levels.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/levels.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>2MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for user actions -->
+    <appender name="USER_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/user.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/user.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>2MB</maxFileSize>
+            <maxHistory>14</maxHistory>
+            <totalSizeCap>50MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File appender for performance metrics -->
+    <appender name="PERFORMANCE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/performance.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/performance.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>1MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>20MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logger configurations -->
+
+    <!-- Main game logger -->
+    <logger name="Game" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="GAME_FILE"/>
+    </logger>
+
+    <!-- Packet-specific logger -->
+    <logger name="packet" level="INFO" additivity="false">
+        <appender-ref ref="PACKET_FILE"/>
+    </logger>
+
+    <!-- Collision logger -->
+    <logger name="collision" level="WARN" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="COLLISION_FILE"/>
+    </logger>
+
+    <!-- Shop logger -->
+    <logger name="shop" level="INFO" additivity="false">
+        <appender-ref ref="SHOP_FILE"/>
+    </logger>
+
+    <!-- System logger -->
+    <logger name="system" level="INFO" additivity="false">
+        <appender-ref ref="SYSTEM_FILE"/>
+    </logger>
+
+    <!-- Level logger -->
+    <logger name="level" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="LEVEL_FILE"/>
+    </logger>
+
+    <!-- User logger -->
+    <logger name="user" level="INFO" additivity="false">
+        <appender-ref ref="USER_FILE"/>
+    </logger>
+
+    <!-- Performance logger -->
+    <logger name="performance" level="DEBUG" additivity="false">
+        <appender-ref ref="PERFORMANCE_FILE"/>
+    </logger>
+
+    <!-- Root logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="GAME_FILE"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,9 @@
+2025-09-16 02:24:13.529 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@6a6c4fa7 (square) and Game.Packet@56040066 (triangle), Position: (140.00, 102.00), Distance: 9.85
+2025-09-16 02:24:13.777 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@25c4768c (square) and Game.Packet@57bb0d10 (triangle), Position: (140.00, 102.00), Distance: 9.85
+2025-09-16 02:24:14.040 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@6b2e8790 (square) and Game.Packet@5c678c85 (triangle), Position: (140.00, 102.00), Distance: 9.85
+2025-09-16 02:24:14.320 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@71cab09d (square) and Game.Packet@2868d4d9 (triangle), Position: (140.00, 102.00), Distance: 9.85
+2025-09-16 10:46:36.626 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@218be97a (confidential_6) and Game.Packet@77bf1016 (confidential_6), Position: (367.00, 96.00), Distance: 9.22
+2025-09-16 10:46:38.125 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@4d6e7a44 (confidential_6) and Game.Packet@e82a5ea (confidential_6), Position: (367.00, 96.00), Distance: 9.22
+2025-09-16 10:46:39.551 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@932a2aa (confidential_6) and Game.Packet@1d9c89c6 (confidential_6), Position: (366.00, 95.00), Distance: 7.62
+2025-09-16 10:46:41.021 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@299355f8 (protected) and Game.Packet@eb8e6fa (confidential_6), Position: (367.00, 96.00), Distance: 9.22
+2025-09-16 10:48:35.571 [AWT-EventQueue-0] ERROR collision - Packet collision - Packets: Game.Packet@74c15054 (confidential_6) and Game.Packet@76d096dd (confidential_6), Position: (317.00, 104.00), Distance: 10.00
