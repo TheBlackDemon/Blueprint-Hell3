@@ -39,9 +39,31 @@ public class PacketTypeRegistry {
             e.printStackTrace();
         }
     }
+    private Class<?> loadAmmunitionTypeClass() throws ClassNotFoundException {
+        String[] possiblePackages = {
+                "Game",
+                "main.java.Game",
+                "main.Game"
+        };
+
+        for (String pkg : possiblePackages) {
+            try {
+                String fullClassName = pkg + "." + AMMUNITION_TYPE_CLASS;
+                System.out.println("Trying: " + fullClassName);
+                return Class.forName(fullClassName);
+            } catch (ClassNotFoundException e) {
+                System.out.println("Not found: " + pkg + "." + AMMUNITION_TYPE_CLASS);
+            }
+        }
+
+        throw new ClassNotFoundException("Cannot find AmmunitionType in any package");
+    }
 
     private void discoverPacketTypesFromEnum() throws Exception {
-        Class<?> ammunitionTypeClass = Class.forName(PACKET_PACKAGE + "." + AMMUNITION_TYPE_CLASS);
+
+
+        Class<?> ammunitionTypeClass = AmmunitionType.class;
+
         Object[] enumConstants = ammunitionTypeClass.getEnumConstants();
         
         for (Object enumConstant : enumConstants) {
@@ -65,21 +87,32 @@ public class PacketTypeRegistry {
             }
         }
     }
-    
+
 
     private void discoverPacketTypesFromPacketClass() throws Exception {
-        Class<?> packetClass = Class.forName(PACKET_PACKAGE + ".Packet");
-        
+        Class<?> packetClass = Packet.class;
+
         Field[] fields = packetClass.getDeclaredFields();
         for (Field field : fields) {
-            if (field.getName().toLowerCase().contains("packet") && 
-                field.getType() == String.class) {
+            if (field.getName().toLowerCase().contains("packet") &&
+                    field.getType() == String.class) {
+
                 field.setAccessible(true);
-                String packetType = (String) field.get(null);
-                if (packetType != null && !packetTypes.containsKey(packetType)) {
-                    PacketTypeInfo info = new PacketTypeInfo(packetType, packetType, null, 1);
-                    packetTypes.put(packetType, info);
-                    System.out.println("Discovered additional packet type: " + packetType);
+
+                if (java.lang.reflect.Modifier.isStatic(field.getModifiers())) {
+                    String packetType = (String) field.get(null);
+
+                    if (packetType != null && !packetType.trim().isEmpty()) {
+                        if (!packetTypes.containsKey(packetType)) {
+                            PacketTypeInfo info = new PacketTypeInfo(packetType, packetType, null, 1);
+                            packetTypes.put(packetType, info);
+                            System.out.println("Discovered packet type: " + packetType);
+                        }
+                    } else {
+                        System.out.println("Skipping null/empty field: " + field.getName());
+                    }
+                } else {
+                    System.out.println("Skipping non-static field: " + field.getName());
                 }
             }
         }

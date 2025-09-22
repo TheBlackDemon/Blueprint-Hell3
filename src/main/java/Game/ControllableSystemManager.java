@@ -116,28 +116,6 @@ public class ControllableSystemManager {
         }
     }
 
-    public Collection<ControllableReferenceSystem> getAllControllableSystems() {
-        return controllableSystems.values();
-    }
-
-    public ControllableReferenceSystem getControllableSystem(String systemId) {
-        return controllableSystems.get(systemId);
-    }
-
-    public boolean isControllableSystem(String systemId) {
-        return controllableSystems.containsKey(systemId);
-    }
-
-
-    public void removeControllableSystem(String systemId) {
-        controllableSystems.remove(systemId);
-    }
-
-    public void clear() {
-        controllableSystems.clear();
-        uncontrollableSystems.clear();
-        playerGameStates.clear();
-    }
 
     public Map<String, List<INode>> getUncontrollableSystems() {
         return new HashMap<>(uncontrollableSystems);

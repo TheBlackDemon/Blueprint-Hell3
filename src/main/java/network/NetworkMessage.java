@@ -16,7 +16,6 @@ public class NetworkMessage {
         GAME_RESULT,       // Game completion result
         HEARTBEAT,         // Keep-alive message
         ERROR,             // Error message
-
         CREATE_GAME,       // Create new multiplayer game
         JOIN_GAME,         // Join existing multiplayer game
         PLAYER_READY,      // Player ready status
@@ -31,11 +30,7 @@ public class NetworkMessage {
     private String clientId;
     private long timestamp;
     private String sessionId;
-    
-    public NetworkMessage() {
-        this.timestamp = System.currentTimeMillis();
-    }
-    
+
     public NetworkMessage(MessageType type, String data, String clientId) {
         this.type = type;
         this.data = data;
@@ -52,13 +47,6 @@ public class NetworkMessage {
     
     public String getClientId() { return clientId; }
     public void setClientId(String clientId) { this.clientId = clientId; }
-    
-    public long getTimestamp() { return timestamp; }
-    public void setTimestamp(long timestamp) { this.timestamp = timestamp; }
-    
-    public String getSessionId() { return sessionId; }
-    public void setSessionId(String sessionId) { this.sessionId = sessionId; }
-    
 
     public String toJson() {
         Gson gson = new GsonBuilder().create();

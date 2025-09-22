@@ -317,7 +317,7 @@ public class MultiplayerGamePanel extends GamePanel {
     private void updateGameState() {
         if (gameState.isGameStarted()) {
             gameState.updateControllableSystems();
-            
+
             updateScores();
             
             sendGameStateUpdate();
@@ -632,15 +632,4 @@ public class MultiplayerGamePanel extends GamePanel {
             }
         }
     }
-
-//    @Override
-//    public void cleanup() {
-//        if (gameTimer != null) {
-//            gameTimer.cancel();
-//        }
-//        if (networkSetupTimer != null) {
-//            networkSetupTimer.cancel();
-//        }
-//        super.cleanup();
-//    }
 }

@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class MainScreen extends JPanel implements ActionListener, NetworkStatusPanel.NetworkStatusListener {
     private User user;
+    private JButton multiPlayer;
     private JButton start;
     private JButton setting;
     private JButton exit;
@@ -40,37 +41,43 @@ public class MainScreen extends JPanel implements ActionListener, NetworkStatusP
 
         start = new JButton("Start Last Game");
         start.setFocusable(false);
-        start.setBounds(300, 130, 200, 60);
+        start.setBounds(300, 130, 200, 40);
         start.addActionListener(this);
         this.add(start);
 
         levels = new JButton("Levels");
         levels.setFocusable(false);
-        levels.setBounds(300, 200, 200, 60);
+        levels.setBounds(300, 185, 200, 40);
         levels.addActionListener(this);
         this.add(levels);
 
         leaderboard = new JButton("Leaderboard");
         leaderboard.setFocusable(false);
-        leaderboard.setBounds(300, 270, 200, 60);
+        leaderboard.setBounds(300, 240, 200, 40);
         leaderboard.addActionListener(this);
         this.add(leaderboard);
 
         shop = new JButton("Shop");
         shop.setFocusable(false);
-        shop.setBounds(300, 340, 200, 60);
+        shop.setBounds(300, 295, 200, 40);
         shop.addActionListener(this);
         this.add(shop);
 
         setting = new JButton("Setting");
         setting.setFocusable(false);
-        setting.setBounds(300, 410, 200, 60);
+        setting.setBounds(300, 350, 200, 40);
         setting.addActionListener(this);
         this.add(setting);
 
+        multiPlayer = new JButton("Start Last Game");
+        multiPlayer.setFocusable(false);
+        multiPlayer.setBounds(300, 405, 200, 40);
+        multiPlayer.addActionListener(this);
+        this.add(multiPlayer);
+
         exit = new JButton("Exit");
         exit.setFocusable(false);
-        exit.setBounds(300, 480, 200, 60);
+        exit.setBounds(300, 460, 200, 40);
         exit.addActionListener(this);
         this.add(exit);
 
@@ -83,7 +90,7 @@ public class MainScreen extends JPanel implements ActionListener, NetworkStatusP
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource().equals(start)) {
+        if (e.getSource().equals(start)){
             GameInitializer initializer = new GameInitializer();
             if (user.getMaxLevelPass() == 0){
                 // Start from level 1
@@ -91,6 +98,11 @@ public class MainScreen extends JPanel implements ActionListener, NetworkStatusP
             } else {
                 initializer.newGame(client , isOnline , user.getMaxLevelPass(), user);
             }
+        }
+        else if (e.getSource().equals(multiPlayer)) {
+            MultiplayerLobbyPanel multiplayerLobbyPanel = new MultiplayerLobbyPanel(client , client.getClientId());
+            Window.getMainFrame().setContentPane(multiplayerLobbyPanel);
+            Window.getMainFrame().revalidate();
         } else if (e.getSource().equals(levels)) {
             LevelSelectionPanel levelPanel = new LevelSelectionPanel(client , isOnline , user);
             Window.getMainFrame().setContentPane(levelPanel);

@@ -39,8 +39,6 @@ public class Window extends JFrame {
         mainScreen = new MainScreen(user, client, onlineMode);
         this.setContentPane(mainScreen);
 
-        leaderboardPanel = new LeaderboardPanel(user, client, offlineManager, onlineMode);
-
         MainFrame = this;
         setVisible(true);
     }

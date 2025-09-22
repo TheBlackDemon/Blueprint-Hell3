@@ -195,12 +195,4 @@ public class AmmunitionPanel extends JPanel {
         return null;
     }
 
-    public void clearSelection() {
-        selectedType = null;
-        repaint();
-    }
-
-    public AmmunitionType getSelectedType() {
-        return selectedType;
-    }
 }

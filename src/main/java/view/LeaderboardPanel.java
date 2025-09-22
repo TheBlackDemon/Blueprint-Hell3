@@ -4,7 +4,6 @@ import client.ClientMain;
 import controller.User;
 import network.LeaderboardEntry;
 import network.OfflineGameManager;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -185,12 +184,5 @@ public class LeaderboardPanel extends JPanel {
     private String formatDate(long timestamp) {
         java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm");
         return sdf.format(new java.util.Date(timestamp));
-    }
-
-    public void showError(String message) {
-        SwingUtilities.invokeLater(() -> {
-            statusLabel.setText("Error: " + message);
-            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
-        });
     }
 }

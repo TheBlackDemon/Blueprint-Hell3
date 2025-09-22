@@ -4,7 +4,6 @@ import client.ClientMain;
 import controller.AudioManager;
 import controller.User;
 import Game.GameConfig;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -3,7 +3,6 @@ package server;
 import network.GameStateData;
 import network.LeaderboardEntry;
 import network.NetworkMessage;
-
 import java.io.*;
 import java.net.Socket;
 import java.util.List;
@@ -19,7 +18,7 @@ public class ClientHandler implements Runnable {
     private final PrintWriter writer;
     private final AtomicBoolean connected = new AtomicBoolean(true);
     private final AtomicLong lastHeartbeat = new AtomicLong(System.currentTimeMillis());
-    
+
     public ClientHandler(String clientId, Socket socket, ServerMain server) throws IOException {
         this.clientId = clientId;
         this.socket = socket;
@@ -138,38 +137,41 @@ public class ClientHandler implements Runnable {
         sendMessage(response);
         lastHeartbeat.set(System.currentTimeMillis());
     }
-    
+
     private void handleGameResult(NetworkMessage message) {
+        System.out.println("Received GAME_RESULT from " + clientId + ": " + message.getData());
+
         try {
             GameStateData gameState = GameStateData.fromJson(message.getData());
+
             LeaderboardEntry entry = new LeaderboardEntry(
-                gameState.getUsername(),
-                gameState.getLevel(),
-                System.currentTimeMillis() - gameState.getLevelStartTime(),
-                calculateXP(gameState),
-                gameState.getCoins()
+                    gameState.getUsername(),
+                    gameState.getLevel(),
+                    System.currentTimeMillis() - gameState.getLevelStartTime(),
+                    calculateXP(gameState),
+                    gameState.getCoins()
             );
             entry.setSessionId(clientId);
-            
+
             server.addLeaderboardEntry(entry);
-            
+
             List<LeaderboardEntry> leaderboard = server.getLeaderboard();
             String leaderboardJson = new com.google.gson.Gson().toJson(leaderboard);
-            
             NetworkMessage broadcast = new NetworkMessage(
-                NetworkMessage.MessageType.LEADERBOARD, 
-                leaderboardJson, 
-                "server"
+                    NetworkMessage.MessageType.LEADERBOARD,
+                    leaderboardJson,
+                    "server"
             );
             server.broadcastMessage(broadcast);
-            
+
             System.out.println("Game result processed for " + clientId + ": " + entry);
+
         } catch (Exception e) {
             System.err.println("Error processing game result from " + clientId + ": " + e.getMessage());
             sendError("Invalid game result format");
         }
-        lastHeartbeat.set(System.currentTimeMillis());
     }
+
     
     private void handleHeartbeat(NetworkMessage message) {
         lastHeartbeat.set(System.currentTimeMillis());
@@ -180,7 +182,7 @@ public class ClientHandler implements Runnable {
         System.err.println("Error from client " + clientId + ": " + message.getData());
         lastHeartbeat.set(System.currentTimeMillis());
     }
-    
+
     private void handleCreateGame(NetworkMessage message) {
         String gameId = server.createMultiplayerGame(clientId);
         if (gameId != null) {
@@ -280,19 +282,14 @@ public class ClientHandler implements Runnable {
         }
     }
     
-    public String getClientId() {
-        return clientId;
-    }
-    
     public long getLastHeartbeat() {
         return lastHeartbeat.get();
     }
-    
-    public boolean isConnected() {
-        return connected.get();
-    }
+
     
     public Socket getSocket() {
         return socket;
     }
+
+
 }

@@ -2,6 +2,7 @@ package Game;
 
 import client.ClientMain;
 import controller.AudioManager;
+import network.GameStateData;
 import view.GameOverPanel;
 import view.ShopPanel;
 import view.SuccessfullyPanel;
@@ -78,10 +79,12 @@ public class GamePanel extends JPanel {
             }else{
                 ((Timer)e.getSource()).stop();
                 if (state.isGameOver()) {
+                    sendGameResult();
                     GameOverPanel gameOverPanel = new GameOverPanel(client , onlineMod , state.getUser(), state.getPacketLoss(), state.getPackets().size());
                     Window.getMainFrame().setContentPane(gameOverPanel);
                     return;
                 } else if (state.isSuccessfully()) {
+                    sendGameResult();
                     SuccessfullyPanel successfullyPanel = new SuccessfullyPanel(client , onlineMod , state.getUser(), state.getPacketLoss(), state.getPackets().size() , state.getLevel());
                     Window.getMainFrame().setContentPane(successfullyPanel);
                     return;
@@ -738,5 +741,24 @@ public class GamePanel extends JPanel {
     private String getConnectionId(IConnection conn) {
         return conn.getFromNode().getId() + "_" + conn.getToNode().getId() + 
                "_" + conn.getFromPort() + "_" + conn.getToPort();
+    }
+
+    private void sendGameResult() {
+        GameStateData finalState = convertToGameStateData();
+        client.sendGameResult(finalState);
+    }
+
+    private GameStateData convertToGameStateData() {
+        GameStateData data = new GameStateData();
+        data.setLevel(getState().getLevel());
+        data.setGameOver(getState().isGameOver());
+        data.setSuccessfully(getState().isSuccessfully());
+        data.setPacketLoss(getState().getPacketLoss());
+        data.setLevelStartTime(getState().getLevelStartTime());
+        data.setUsername(getState().getUser().getUsername());
+        data.setCoins(getState().getUser().getCoin());
+        data.setMaxLevelPass(getState().getUser().getMaxLevelPass());
+
+        return data;
     }
 }

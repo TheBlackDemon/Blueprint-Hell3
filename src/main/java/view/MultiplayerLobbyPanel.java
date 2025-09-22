@@ -1,7 +1,12 @@
 package view;
 
+import Game.*;
 import client.ClientMain;
+import controller.AudioManager;
+import controller.User;
+import network.MultiplayerGameState;
 import network.NetworkMessage;
+import server.ServerMain;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,13 +24,12 @@ public class MultiplayerLobbyPanel extends JPanel {
     
     private JLabel statusLabel;
     private JList<String> gameList;
-    private DefaultListModel<String> gameListModel;
     private JButton createGameButton;
     private JButton joinGameButton;
     private JButton refreshButton;
     private JButton backButton;
     private JLabel playerInfoLabel;
-    
+
     public MultiplayerLobbyPanel(ClientMain client, String playerId) {
         this.client = client;
         this.playerId = playerId;
@@ -36,6 +40,7 @@ public class MultiplayerLobbyPanel extends JPanel {
     }
     
     private void initializeUI() {
+        client.setMultiplayerLobbyPanel(this);
         setLayout(new BorderLayout());
         setBackground(new Color(240, 240, 240));
         
@@ -53,8 +58,7 @@ public class MultiplayerLobbyPanel extends JPanel {
         statusLabel.setHorizontalAlignment(SwingConstants.CENTER);
         statusLabel.setForeground(Color.GREEN);
         
-        gameListModel = new DefaultListModel<>();
-        gameList = new JList<>(gameListModel);
+        gameList = new JList<>(ServerMain.getGameListModel());
         gameList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         gameList.setFont(new Font("Arial", Font.PLAIN, 12));
         gameList.setBorder(BorderFactory.createTitledBorder("Available Games"));
@@ -126,9 +130,9 @@ public class MultiplayerLobbyPanel extends JPanel {
     
     public void updateGameList(List<String> games) {
         SwingUtilities.invokeLater(() -> {
-            gameListModel.clear();
+            ServerMain.getGameListModel().clear();
             for (String game : games) {
-                gameListModel.addElement("Game: " + game);
+                ServerMain.getGameListModel().addElement("Game: " + game);
             }
             statusLabel.setText("Found " + games.size() + " available games");
             statusLabel.setForeground(Color.BLUE);
@@ -140,8 +144,8 @@ public class MultiplayerLobbyPanel extends JPanel {
             JOptionPane.showMessageDialog(this, 
                 "Game created successfully!\nGame ID: " + gameId + "\nWaiting for opponent...",
                 "Game Created", JOptionPane.INFORMATION_MESSAGE);
-            
-            gameListModel.addElement("Game: " + gameId + " (Your Game)");
+
+            ServerMain.getGameListModel().addElement("Game: " + gameId + " (Your Game)");
         });
     }
     
@@ -155,21 +159,12 @@ public class MultiplayerLobbyPanel extends JPanel {
         });
     }
     
-    public void handleGameJoinFailed() {
-        SwingUtilities.invokeLater(() -> {
-            JOptionPane.showMessageDialog(this, 
-                "Failed to join game. Please try again.",
-                "Join Failed", JOptionPane.ERROR_MESSAGE);
-        });
-    }
-    
     private void startMultiplayerGame(String gameId) {
-
-        JOptionPane.showMessageDialog(this, 
+        JOptionPane.showMessageDialog(this,
             "Multiplayer game would start here with game ID: " + gameId,
             "Multiplayer Game", JOptionPane.INFORMATION_MESSAGE);
     }
-    
+
 
     private class CreateGameListener implements ActionListener {
         @Override
@@ -210,15 +205,9 @@ public class MultiplayerLobbyPanel extends JPanel {
     private class BackListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            MainScreen mainScreen = new MainScreen(client.getUser(), client, true);
+            Window.getMainFrame().setContentPane(mainScreen);
+        }
+    }
 
-            JOptionPane.showMessageDialog(MultiplayerLobbyPanel.this, 
-                "Returning to main menu...", "Back", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }
-    
-    public void cleanup() {
-        if (refreshTimer != null) {
-            refreshTimer.cancel();
-        }
-    }
 }

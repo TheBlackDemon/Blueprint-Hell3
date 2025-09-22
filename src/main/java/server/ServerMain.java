@@ -1,7 +1,12 @@
 package server;
 
+import com.google.gson.ExclusionStrategy;
+import com.google.gson.FieldAttributes;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import network.*;
 
+import javax.swing.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -14,7 +19,6 @@ public class ServerMain {
     private static final int MAX_CLIENTS = 10;
     private static final long HEARTBEAT_INTERVAL = 5000; // 5 seconds
     private static final long CLIENT_TIMEOUT = 30000; // 30 seconds
-    
     private ServerSocket serverSocket;
     private final Map<String, ClientHandler> connectedClients = new ConcurrentHashMap<>();
     private final List<LeaderboardEntry> leaderboard = new CopyOnWriteArrayList<>();
@@ -22,28 +26,28 @@ public class ServerMain {
     private final ExecutorService clientExecutor = Executors.newCachedThreadPool();
     private final ScheduledExecutorService heartbeatExecutor = Executors.newScheduledThreadPool(1);
     private final AtomicInteger clientIdCounter = new AtomicInteger(0);
-    
     private final Map<String, MultiplayerGameState> activeGames = new ConcurrentHashMap<>();
     private final Map<String, String> clientToGameMap = new ConcurrentHashMap<>();
     private final AtomicInteger gameIdCounter = new AtomicInteger(0);
-    
     private final DataIntegrityValidator dataValidator = new DataIntegrityValidator();
-    
+    private static DefaultListModel<String> gameListModel = new DefaultListModel<>();
+
+
     public static void main(String[] args) {
         ServerMain server = new ServerMain();
         server.start();
     }
-    
+
     public void start() {
         try {
             serverSocket = new ServerSocket(SERVER_PORT);
             isRunning.set(true);
-            
+
             System.out.println("Server started on port " + SERVER_PORT);
             System.out.println("Waiting for client connections...");
-            
+
             startHeartbeatService();
-            
+
             startLeaderboardCleanupService();
             
             while (isRunning.get()) {
@@ -54,12 +58,12 @@ public class ServerMain {
                         clientSocket.close();
                         continue;
                     }
-                    
+
                     String clientId = "client_" + clientIdCounter.incrementAndGet();
                     ClientHandler clientHandler = new ClientHandler(clientId, clientSocket, this);
                     connectedClients.put(clientId, clientHandler);
                     clientExecutor.submit(clientHandler);
-                    
+
                     System.out.println("Client connected: " + clientId + " from " + clientSocket.getInetAddress());
                 } catch (IOException e) {
                     if (isRunning.get()) {
@@ -76,15 +80,15 @@ public class ServerMain {
     
     public void stop() {
         isRunning.set(false);
-        
+
         for (ClientHandler client : connectedClients.values()) {
             client.disconnect();
         }
         connectedClients.clear();
-        
+
         clientExecutor.shutdown();
         heartbeatExecutor.shutdown();
-        
+
         try {
             if (serverSocket != null && !serverSocket.isClosed()) {
                 serverSocket.close();
@@ -99,10 +103,10 @@ public class ServerMain {
     private void startHeartbeatService() {
         heartbeatExecutor.scheduleAtFixedRate(() -> {
             if (!isRunning.get()) return;
-            
+
             long currentTime = System.currentTimeMillis();
             List<String> clientsToRemove = new ArrayList<>();
-            
+
             for (Map.Entry<String, ClientHandler> entry : connectedClients.entrySet()) {
                 ClientHandler client = entry.getValue();
                 if (currentTime - client.getLastHeartbeat() > CLIENT_TIMEOUT) {
@@ -113,7 +117,7 @@ public class ServerMain {
                     client.sendHeartbeat();
                 }
             }
-            
+
             for (String clientId : clientsToRemove) {
                 connectedClients.remove(clientId);
             }
@@ -153,6 +157,9 @@ public class ServerMain {
     }
     
     public void addLeaderboardEntry(LeaderboardEntry entry) {
+        System.out.println("Leaderboard before add: " + leaderboard.size());
+        System.out.println("Added entry: " + entry + ", leaderboard now: " + leaderboard.size());
+
         leaderboard.add(entry);
         leaderboard.sort((a, b) -> {
             int levelCompare = Integer.compare(b.getLevel(), a.getLevel());
@@ -170,32 +177,25 @@ public class ServerMain {
     public List<LeaderboardEntry> getLeaderboard() {
         return new ArrayList<>(leaderboard);
     }
-    
-    public int getConnectedClientCount() {
-        return connectedClients.size();
-    }
-    
-    public boolean isRunning() {
-        return isRunning.get();
-    }
+
 
     public String createMultiplayerGame(String clientId) {
         String gameId = "game_" + gameIdCounter.incrementAndGet();
         MultiplayerGameState gameState = new MultiplayerGameState(gameId);
-        
+
         ClientHandler client = connectedClients.get(clientId);
         if (client != null) {
             String macAddress = dataValidator.getMacAddressFromConnection(client.getSocket());
             gameState.addPlayer(clientId, macAddress);
             activeGames.put(gameId, gameState);
             clientToGameMap.put(clientId, gameId);
-            
             System.out.println("Created multiplayer game " + gameId + " for client " + clientId);
             return gameId;
         }
-        
+
         return null;
     }
+
     
 
     public boolean joinMultiplayerGame(String clientId, String gameId) {
@@ -240,7 +240,7 @@ public class ServerMain {
                 String macAddress = dataValidator.getMacAddressFromConnection(
                     connectedClients.get(clientId).getSocket()
                 );
-                
+
                 DataIntegrityValidator.GameResultData resultData =
                     new DataIntegrityValidator.GameResultData(
                         gameStateData.getLevel(),
@@ -248,13 +248,13 @@ public class ServerMain {
                         gameStateData.getPacketLoss(),
                         gameStateData.getCoins()
                     );
-                
+
                 String dataHash = dataValidator.generateDataHash(resultData, macAddress);
                 resultData.setDataHash(dataHash);
-                
+
                 if (dataValidator.validateGameResult(macAddress, resultData)) {
                     dataValidator.updateUserProgress(macAddress, resultData);
-                    
+
                     broadcastToGame(gameId, new NetworkMessage(
                         NetworkMessage.MessageType.GAME_STATE,
                         gameStateData.toJson(),
@@ -270,7 +270,7 @@ public class ServerMain {
             }
         }
     }
-    
+
 
     public void handleGameResult(String clientId, GameStateData gameStateData) {
         String gameId = clientToGameMap.get(clientId);
@@ -281,21 +281,21 @@ public class ServerMain {
                 String macAddress = dataValidator.getMacAddressFromConnection(
                     connectedClients.get(clientId).getSocket()
                 );
-                
-                DataIntegrityValidator.GameResultData resultData = 
+
+                DataIntegrityValidator.GameResultData resultData =
                     new DataIntegrityValidator.GameResultData(
                         gameStateData.getLevel(),
                         System.currentTimeMillis() - gameStateData.getLevelStartTime(),
                         gameStateData.getPacketLoss(),
                         gameStateData.getCoins()
                     );
-                
+
                 String dataHash = dataValidator.generateDataHash(resultData, macAddress);
                 resultData.setDataHash(dataHash);
-                
+
                 if (dataValidator.validateGameResult(macAddress, resultData)) {
                     dataValidator.updateUserProgress(macAddress, resultData);
-                    
+
                     LeaderboardEntry entry = new LeaderboardEntry(
                         dataValidator.getUserData(macAddress).getUsername(),
                         gameStateData.getLevel(),
@@ -304,7 +304,7 @@ public class ServerMain {
                         gameStateData.getCoins() // Coins
                     );
                     addLeaderboardEntry(entry);
-                    
+
                     if (gameState.isGameStarted()) {
                         MultiplayerGameState.GameResult gameResult = gameState.getGameResult();
                         if (gameResult != null) {
@@ -319,7 +319,7 @@ public class ServerMain {
             }
         }
     }
-    
+
 
     private void broadcastToGame(String gameId, NetworkMessage message) {
         MultiplayerGameState gameState = activeGames.get(gameId);
@@ -332,7 +332,7 @@ public class ServerMain {
             }
         }
     }
-    
+
 
     private void broadcastToGame(String gameId, NetworkMessage message, String excludeClientId) {
         MultiplayerGameState gameState = activeGames.get(gameId);
@@ -350,6 +350,7 @@ public class ServerMain {
 
     public List<String> getAvailableGames() {
         List<String> availableGames = new ArrayList<>();
+        System.out.println(activeGames.size() + "kossssss");
         for (MultiplayerGameState game : activeGames.values()) {
             if (game.getAllPlayers().size() < 2) {
                 availableGames.add(game.getGameId());
@@ -358,11 +359,10 @@ public class ServerMain {
         return availableGames;
     }
 
-    private void cleanupFinishedGames() {
-        activeGames.entrySet().removeIf(entry -> {
-            MultiplayerGameState game = entry.getValue();
-            return !game.isGameStarted() && 
-                   System.currentTimeMillis() - game.getGameStartTime() > 300000; // 5 minutes
-        });
+
+
+    public static DefaultListModel<String> getGameListModel() {
+        return gameListModel;
     }
+
 }

@@ -15,13 +15,6 @@ public class BendPoint {
         this.dragOffset = new Point(0, 0);
     }
     
-    public BendPoint(Point position, int maxRadius) {
-        this.position = new Point(position);
-        this.maxRadius = maxRadius;
-        this.isDragging = false;
-        this.dragOffset = new Point(0, 0);
-    }
-    
     public Point getPosition() {
         return new Point(position);
     }
