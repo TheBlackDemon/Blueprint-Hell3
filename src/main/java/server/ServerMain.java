@@ -208,6 +208,14 @@ public class ServerMain {
                 if (success) {
                     clientToGameMap.put(clientId, gameId);
                     System.out.println("Client " + clientId + " joined game " + gameId);
+                    // If we now have 2 players, notify both clients to start the game
+                    if (gameState.getAllPlayers().size() == 2) {
+                        broadcastToGame(gameId, new NetworkMessage(
+                            NetworkMessage.MessageType.JOIN_GAME,
+                            gameId,
+                            "server"
+                        ));
+                    }
                     return true;
                 }
             }
@@ -350,7 +358,6 @@ public class ServerMain {
 
     public List<String> getAvailableGames() {
         List<String> availableGames = new ArrayList<>();
-        System.out.println(activeGames.size() + "kossssss");
         for (MultiplayerGameState game : activeGames.values()) {
             if (game.getAllPlayers().size() < 2) {
                 availableGames.add(game.getGameId());

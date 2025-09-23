@@ -5,7 +5,6 @@ import client.ClientMain;
 import network.GameStateData;
 import network.MultiplayerGameState;
 import network.NetworkMessage;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -23,19 +22,16 @@ public class MultiplayerGamePanel extends GamePanel {
     private final String opponentId;
     private final Timer gameTimer;
     private final Timer networkSetupTimer;
-    
     private JLabel setupTimeLabel;
     private JLabel playerScoreLabel;
     private JLabel opponentScoreLabel;
     private JButton readyButton;
     private JLabel statusLabel;
     private JPanel infoPanel;
-    
     private boolean isReady;
     private long networkSetupStartTime;
     private boolean isExtendedTime;
     private boolean wrathEffectsActive;
-    
     private AmmunitionPanel currentAmmunitionPanel;
     private ControllableReferenceSystem hoveredSystem;
     private boolean showOpponentNetwork;
@@ -70,6 +66,28 @@ public class MultiplayerGamePanel extends GamePanel {
         initializeControllableSystems();
         addMouseListener(new ControllableSystemMouseListener());
         startNetworkSetupTimer();
+    }
+
+    public void onPlayerReady(String readyPlayerId, boolean isReadyFlag) {
+        if (gameState == null) return;
+        if (isReadyFlag) {
+            gameState.setPlayerReady(readyPlayerId, true);
+        }
+
+        boolean bothReady = gameState.allPlayersReady();
+        SwingUtilities.invokeLater(() -> {
+            if (bothReady) {
+                statusLabel.setText("Both players ready. Starting...");
+                statusLabel.setForeground(Color.GREEN);
+                readyButton.setEnabled(false);
+                // trigger start
+                gameState.startGame();
+            } else {
+                statusLabel.setText(readyPlayerId + " is ready. Waiting for opponent...");
+                statusLabel.setForeground(Color.ORANGE);
+            }
+            repaint();
+        });
     }
     
     private void initializeMultiplayerUI() {
@@ -118,7 +136,7 @@ public class MultiplayerGamePanel extends GamePanel {
         infoPanel.add(bottomPanel, BorderLayout.SOUTH);
         
         this.add(infoPanel);
-        infoPanel.setBounds(10, 10, 400, 120);
+        infoPanel.setBounds(540, getHeight() - 160, 240, 120);
     }
     
     private void initializeControllableSystems() {

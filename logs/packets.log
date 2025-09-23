@@ -1678,3 +1678,171 @@
 2025-09-22 16:42:58.145 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3a46f29e, Type: square, Node: D, TravelTime: 2899ms
 2025-09-22 16:42:58.145 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@5853f7ee
 2025-09-22 16:42:58.145 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@622cbad2
+2025-09-23 08:20:10.193 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:10.199 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:11.061 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@2ef344a5, Type: triangle, Node: B, TravelTime: 862ms
+2025-09-23 08:20:11.062 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@41b61a19, Type: square, Node: B, TravelTime: 874ms
+2025-09-23 08:20:11.062 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:11.062 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:11.904 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@430a4740, Type: triangle, Node: B, TravelTime: 842ms
+2025-09-23 08:20:11.904 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@19f79c4a, Type: square, Node: B, TravelTime: 842ms
+2025-09-23 08:20:11.904 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@2ef344a5, Type: triangle, Node: D, TravelTime: 1705ms
+2025-09-23 08:20:11.907 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@41b61a19, Type: square, Node: D, TravelTime: 1719ms
+2025-09-23 08:20:11.908 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:11.908 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:12.755 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@30a43703, Type: triangle, Node: B, TravelTime: 847ms
+2025-09-23 08:20:12.755 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@425e1fb2, Type: square, Node: B, TravelTime: 847ms
+2025-09-23 08:20:12.755 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@2ef344a5, Type: triangle, Node: C, TravelTime: 2556ms
+2025-09-23 08:20:12.756 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@41b61a19, Type: square, Node: C, TravelTime: 2568ms
+2025-09-23 08:20:12.756 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:12.756 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:13.595 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@257cdef6, Type: triangle, Node: B, TravelTime: 839ms
+2025-09-23 08:20:13.595 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@809bc87, Type: square, Node: B, TravelTime: 839ms
+2025-09-23 08:20:13.596 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@30a43703, Type: triangle, Node: D, TravelTime: 1688ms
+2025-09-23 08:20:13.596 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@425e1fb2, Type: square, Node: D, TravelTime: 1688ms
+2025-09-23 08:20:13.596 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:13.596 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:14.436 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@55b4cb29, Type: triangle, Node: B, TravelTime: 840ms
+2025-09-23 08:20:14.437 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4a53272a, Type: square, Node: B, TravelTime: 841ms
+2025-09-23 08:20:14.437 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@30a43703, Type: triangle, Node: C, TravelTime: 2529ms
+2025-09-23 08:20:14.438 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@425e1fb2, Type: square, Node: C, TravelTime: 2530ms
+2025-09-23 08:20:14.438 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:14.439 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:15.420 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@65a45457, Type: triangle, Node: B, TravelTime: 981ms
+2025-09-23 08:20:15.420 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3644da60, Type: square, Node: B, TravelTime: 982ms
+2025-09-23 08:20:15.421 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@55b4cb29, Type: triangle, Node: D, TravelTime: 1825ms
+2025-09-23 08:20:15.421 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4a53272a, Type: square, Node: D, TravelTime: 1825ms
+2025-09-23 08:20:15.421 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:15.421 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:16.401 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4180be18, Type: triangle, Node: B, TravelTime: 980ms
+2025-09-23 08:20:16.401 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@5e4c59e0, Type: square, Node: B, TravelTime: 980ms
+2025-09-23 08:20:16.401 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@55b4cb29, Type: triangle, Node: C, TravelTime: 2805ms
+2025-09-23 08:20:16.402 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4a53272a, Type: square, Node: C, TravelTime: 2806ms
+2025-09-23 08:20:16.402 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:16.402 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:17.456 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@7b1e731c, Type: triangle, Node: B, TravelTime: 1054ms
+2025-09-23 08:20:17.456 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@52bb5914, Type: square, Node: B, TravelTime: 1054ms
+2025-09-23 08:20:17.456 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4180be18, Type: triangle, Node: D, TravelTime: 2035ms
+2025-09-23 08:20:17.457 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@5e4c59e0, Type: square, Node: D, TravelTime: 2036ms
+2025-09-23 08:20:17.457 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:17.457 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:18.417 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@a65bd94, Type: triangle, Node: B, TravelTime: 960ms
+2025-09-23 08:20:18.417 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1b176ad9, Type: square, Node: B, TravelTime: 960ms
+2025-09-23 08:20:18.418 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4180be18, Type: triangle, Node: C, TravelTime: 2997ms
+2025-09-23 08:20:18.418 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@5e4c59e0, Type: square, Node: C, TravelTime: 2997ms
+2025-09-23 08:20:18.418 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:18.418 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:19.383 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@2b36551f, Type: triangle, Node: B, TravelTime: 965ms
+2025-09-23 08:20:19.383 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@7a095fc9, Type: square, Node: B, TravelTime: 965ms
+2025-09-23 08:20:19.383 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@a65bd94, Type: triangle, Node: D, TravelTime: 1926ms
+2025-09-23 08:20:19.383 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1b176ad9, Type: square, Node: D, TravelTime: 1926ms
+2025-09-23 08:20:19.383 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:19.384 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:20.294 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@63f551fd, Type: triangle, Node: B, TravelTime: 910ms
+2025-09-23 08:20:20.294 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@221950d5, Type: square, Node: B, TravelTime: 911ms
+2025-09-23 08:20:20.294 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@a65bd94, Type: triangle, Node: C, TravelTime: 2837ms
+2025-09-23 08:20:20.294 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1b176ad9, Type: square, Node: C, TravelTime: 2837ms
+2025-09-23 08:20:20.295 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:20.295 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:21.130 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@23443ef5, Type: triangle, Node: B, TravelTime: 835ms
+2025-09-23 08:20:21.130 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@27e25925, Type: square, Node: B, TravelTime: 835ms
+2025-09-23 08:20:21.130 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@63f551fd, Type: triangle, Node: D, TravelTime: 1746ms
+2025-09-23 08:20:21.130 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@221950d5, Type: square, Node: D, TravelTime: 1747ms
+2025-09-23 08:20:21.130 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:21.131 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:21.969 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@79b07012, Type: triangle, Node: B, TravelTime: 839ms
+2025-09-23 08:20:21.969 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@6ee1d2bc, Type: square, Node: B, TravelTime: 839ms
+2025-09-23 08:20:21.970 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@63f551fd, Type: triangle, Node: C, TravelTime: 2586ms
+2025-09-23 08:20:21.970 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@221950d5, Type: square, Node: C, TravelTime: 2587ms
+2025-09-23 08:20:21.970 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:21.970 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:20:22.811 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@568f97d2, Type: triangle, Node: B, TravelTime: 841ms
+2025-09-23 08:20:22.811 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@59e6c898, Type: square, Node: B, TravelTime: 841ms
+2025-09-23 08:20:22.811 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@79b07012, Type: triangle, Node: D, TravelTime: 1681ms
+2025-09-23 08:20:22.811 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@6ee1d2bc, Type: square, Node: D, TravelTime: 1681ms
+2025-09-23 08:20:22.811 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@750bc877
+2025-09-23 08:20:22.811 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@3e990029
+2025-09-23 08:32:22.534 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:22.534 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:23.414 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3c38f228, Type: triangle, Node: B, TravelTime: 880ms
+2025-09-23 08:32:23.415 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@5bd4f7bb, Type: square, Node: B, TravelTime: 886ms
+2025-09-23 08:32:23.415 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:23.415 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:24.284 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@5ee36583, Type: triangle, Node: B, TravelTime: 869ms
+2025-09-23 08:32:24.284 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@16d93392, Type: square, Node: B, TravelTime: 869ms
+2025-09-23 08:32:24.285 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3c38f228, Type: triangle, Node: D, TravelTime: 1751ms
+2025-09-23 08:32:24.285 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@5bd4f7bb, Type: square, Node: D, TravelTime: 1756ms
+2025-09-23 08:32:24.285 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:24.285 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:25.123 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@76f03d1c, Type: triangle, Node: B, TravelTime: 838ms
+2025-09-23 08:32:25.123 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3ef42467, Type: square, Node: B, TravelTime: 838ms
+2025-09-23 08:32:25.123 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3c38f228, Type: triangle, Node: C, TravelTime: 2589ms
+2025-09-23 08:32:25.124 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@5bd4f7bb, Type: square, Node: C, TravelTime: 2595ms
+2025-09-23 08:32:25.124 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:25.124 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:25.966 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4d159888, Type: triangle, Node: B, TravelTime: 842ms
+2025-09-23 08:32:25.966 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@6270952d, Type: square, Node: B, TravelTime: 842ms
+2025-09-23 08:32:25.966 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@76f03d1c, Type: triangle, Node: D, TravelTime: 1681ms
+2025-09-23 08:32:25.966 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3ef42467, Type: square, Node: D, TravelTime: 1681ms
+2025-09-23 08:32:25.966 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:25.968 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:26.847 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@6121ad4b, Type: triangle, Node: B, TravelTime: 879ms
+2025-09-23 08:32:26.847 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@37252e4f, Type: square, Node: B, TravelTime: 881ms
+2025-09-23 08:32:26.847 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@76f03d1c, Type: triangle, Node: C, TravelTime: 2562ms
+2025-09-23 08:32:26.847 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@3ef42467, Type: square, Node: C, TravelTime: 2562ms
+2025-09-23 08:32:26.847 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:26.848 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:27.693 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@19b0137d, Type: triangle, Node: B, TravelTime: 845ms
+2025-09-23 08:32:27.693 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@375a3b56, Type: square, Node: B, TravelTime: 846ms
+2025-09-23 08:32:27.693 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@6121ad4b, Type: triangle, Node: D, TravelTime: 1725ms
+2025-09-23 08:32:27.694 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@37252e4f, Type: square, Node: D, TravelTime: 1728ms
+2025-09-23 08:32:27.694 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:27.694 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:28.643 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4ace98b1, Type: triangle, Node: B, TravelTime: 949ms
+2025-09-23 08:32:28.643 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@716d58a1, Type: square, Node: B, TravelTime: 949ms
+2025-09-23 08:32:28.643 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@6121ad4b, Type: triangle, Node: C, TravelTime: 2675ms
+2025-09-23 08:32:28.643 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@37252e4f, Type: square, Node: C, TravelTime: 2677ms
+2025-09-23 08:32:28.643 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:28.644 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:29.599 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@7f06e9ea, Type: triangle, Node: B, TravelTime: 955ms
+2025-09-23 08:32:29.599 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@43aae297, Type: square, Node: B, TravelTime: 956ms
+2025-09-23 08:32:29.600 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4ace98b1, Type: triangle, Node: D, TravelTime: 1906ms
+2025-09-23 08:32:29.600 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@716d58a1, Type: square, Node: D, TravelTime: 1906ms
+2025-09-23 08:32:29.600 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:29.600 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:30.449 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@78f927d8, Type: triangle, Node: B, TravelTime: 849ms
+2025-09-23 08:32:30.449 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@54b84fe7, Type: square, Node: B, TravelTime: 849ms
+2025-09-23 08:32:30.449 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4ace98b1, Type: triangle, Node: C, TravelTime: 2755ms
+2025-09-23 08:32:30.449 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@716d58a1, Type: square, Node: C, TravelTime: 2755ms
+2025-09-23 08:32:30.449 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:30.450 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:31.293 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@4034bfe4, Type: triangle, Node: B, TravelTime: 843ms
+2025-09-23 08:32:31.293 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@25295395, Type: square, Node: B, TravelTime: 844ms
+2025-09-23 08:32:31.293 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@78f927d8, Type: triangle, Node: D, TravelTime: 1693ms
+2025-09-23 08:32:31.293 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@54b84fe7, Type: square, Node: D, TravelTime: 1693ms
+2025-09-23 08:32:31.294 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:31.294 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:32.201 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1e4ff778, Type: triangle, Node: B, TravelTime: 907ms
+2025-09-23 08:32:32.202 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@631ceac6, Type: square, Node: B, TravelTime: 908ms
+2025-09-23 08:32:32.202 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@78f927d8, Type: triangle, Node: C, TravelTime: 2602ms
+2025-09-23 08:32:32.202 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@54b84fe7, Type: square, Node: C, TravelTime: 2602ms
+2025-09-23 08:32:32.202 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:32.202 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:33.071 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@73d178a1, Type: triangle, Node: B, TravelTime: 869ms
+2025-09-23 08:32:33.071 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@73e9f385, Type: square, Node: B, TravelTime: 869ms
+2025-09-23 08:32:33.071 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1e4ff778, Type: triangle, Node: D, TravelTime: 1777ms
+2025-09-23 08:32:33.071 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@631ceac6, Type: square, Node: D, TravelTime: 1777ms
+2025-09-23 08:32:33.071 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:33.071 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:33.936 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@49b99c84, Type: triangle, Node: B, TravelTime: 865ms
+2025-09-23 08:32:33.936 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1324f72c, Type: square, Node: B, TravelTime: 865ms
+2025-09-23 08:32:33.937 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1e4ff778, Type: triangle, Node: C, TravelTime: 2643ms
+2025-09-23 08:32:33.937 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@631ceac6, Type: square, Node: C, TravelTime: 2643ms
+2025-09-23 08:32:33.937 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:33.937 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c
+2025-09-23 08:32:34.805 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@55ee0de8, Type: triangle, Node: B, TravelTime: 868ms
+2025-09-23 08:32:34.805 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@12904635, Type: square, Node: B, TravelTime: 868ms
+2025-09-23 08:32:34.805 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@49b99c84, Type: triangle, Node: D, TravelTime: 1734ms
+2025-09-23 08:32:34.805 [AWT-EventQueue-0] INFO  packet - Packet arrived successfully - ID: Game.Packet@1324f72c, Type: square, Node: D, TravelTime: 1734ms
+2025-09-23 08:32:34.806 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: square, Connection: A->B, ConnectionID: Game.Connection@69171039
+2025-09-23 08:32:34.806 [AWT-EventQueue-0] INFO  packet - Packet spawned - Type: triangle, Connection: A->B, ConnectionID: Game.Connection@327e7e1c

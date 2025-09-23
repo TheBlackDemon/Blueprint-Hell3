@@ -1,62 +1,102 @@
-2025-09-22 14:17:18.458 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758538024103
-2025-09-22 14:17:18.460 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:18:43.671 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 85201ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:20:45.441 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758538235942
-2025-09-22 14:20:45.441 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:21:57.418 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 71975ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:29:53.430 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758538776393
-2025-09-22 14:29:53.430 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:30:55.925 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 62493ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:35:03.551 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758539092979
-2025-09-22 14:35:03.551 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:36:11.490 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 67937ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:38:21.186 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758539285045
-2025-09-22 14:38:21.186 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:39:22.495 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 61307ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:42:42.239 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758539552715
-2025-09-22 14:42:42.239 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:43:38.724 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 56483ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:47:26.890 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758539839359
-2025-09-22 14:47:26.891 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:48:39.913 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 73021ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:50:14.694 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758540007740
-2025-09-22 14:50:14.694 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:51:08.418 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 53723ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 14:53:59.495 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758540216293
-2025-09-22 14:53:59.497 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 14:55:04.950 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 65452ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 15:00:41.139 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758540621748
-2025-09-22 15:00:41.140 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 15:01:47.735 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 66593ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 15:07:48.830 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758541050374
-2025-09-22 15:07:48.831 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 15:08:44.071 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 55239ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 15:18:13.166 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758541687236
-2025-09-22 15:18:13.166 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 15:19:19.730 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 66561ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 15:44:19.702 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758543245480
-2025-09-22 15:44:19.704 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 15:45:06.719 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 47014ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 15:58:26.820 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758544095910
-2025-09-22 15:58:26.822 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 15:59:09.040 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 42217ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 16:24:41.380 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758545662587
-2025-09-22 16:24:41.380 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 16:25:26.815 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 45433ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 16:25:55.222 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758545662587
-2025-09-22 16:25:55.222 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 16:26:59.052 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 63830ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 16:30:06.850 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758545996975
-2025-09-22 16:30:06.851 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 16:30:53.282 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 46426ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 16:34:18.273 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758546230583
-2025-09-22 16:34:18.273 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 16:35:02.081 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 43806ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 16:40:04.095 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758546596397
-2025-09-22 16:40:04.095 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 16:40:47.402 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 43307ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 16:42:09.824 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758546723580
-2025-09-22 16:42:09.824 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
-2025-09-22 16:42:58.177 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 48352ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
-2025-09-22 23:08:00.071 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758569873933
-2025-09-22 23:08:00.073 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 07:59:57.680 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758601757111
+2025-09-23 07:59:57.691 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:00:02.073 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758601757111
+2025-09-23 08:00:02.073 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:00:06.333 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758601768510
+2025-09-23 08:00:06.335 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:02:23.110 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758601923000
+2025-09-23 08:02:23.113 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:02:25.957 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758601920038
+2025-09-23 08:02:25.962 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:02:29.789 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758601923000
+2025-09-23 08:02:29.789 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:10:26.315 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758602407289
+2025-09-23 08:10:26.318 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:10:27.534 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758602396765
+2025-09-23 08:10:27.537 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:10:29.998 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758602407289
+2025-09-23 08:10:29.998 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:19:40.468 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758602965077
+2025-09-23 08:19:40.470 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:19:42.697 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758602954386
+2025-09-23 08:19:42.699 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:20:12.160 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758602965077
+2025-09-23 08:20:12.161 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:20:22.827 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 40126ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
+2025-09-23 08:22:24.586 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603134130
+2025-09-23 08:22:24.588 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:22:26.539 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603124955
+2025-09-23 08:22:26.542 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:22:27.701 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603134130
+2025-09-23 08:22:27.701 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:25:09.756 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603294479
+2025-09-23 08:25:09.759 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:25:11.129 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603286281
+2025-09-23 08:25:11.132 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:25:12.820 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603294479
+2025-09-23 08:25:12.820 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:28:47.442 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603517411
+2025-09-23 08:28:47.444 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:28:49.093 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603507737
+2025-09-23 08:28:49.096 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:29:33.970 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603517411
+2025-09-23 08:29:33.971 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:30:32.123 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603622772
+2025-09-23 08:30:32.125 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:30:33.494 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603606284
+2025-09-23 08:30:33.497 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:30:40.040 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603622772
+2025-09-23 08:30:40.040 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:31:49.001 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603689958
+2025-09-23 08:31:49.004 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:31:50.163 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603683430
+2025-09-23 08:31:50.165 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:31:57.192 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603689958
+2025-09-23 08:31:57.193 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:32:34.823 [AWT-EventQueue-0] INFO  level - Level completed - Number: 1, Name: Level 1, CompletionTime: 37630ms, PacketsDelivered: 30, PacketLoss: 0, CoinsEarned: 0
+2025-09-23 08:34:13.753 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603820079
+2025-09-23 08:34:13.756 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:34:14.804 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603833211
+2025-09-23 08:34:14.807 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:34:15.640 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758603820079
+2025-09-23 08:34:15.640 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:37:09.721 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604021664
+2025-09-23 08:37:09.723 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:37:12.077 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604021664
+2025-09-23 08:37:12.078 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:37:29.372 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604015191
+2025-09-23 08:37:29.374 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:40:06.813 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604200951
+2025-09-23 08:40:06.816 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:40:07.809 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604200951
+2025-09-23 08:40:07.809 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:41:05.037 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604246571
+2025-09-23 08:41:05.039 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:41:07.019 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604246571
+2025-09-23 08:41:07.020 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:41:08.379 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604250964
+2025-09-23 08:41:08.382 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:42:29.058 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604323583
+2025-09-23 08:42:29.060 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:42:30.452 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604334795
+2025-09-23 08:42:30.455 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:43:08.655 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604323583
+2025-09-23 08:43:08.655 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:46:35.506 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604570135
+2025-09-23 08:46:35.510 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:46:37.132 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604581278
+2025-09-23 08:46:37.135 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:46:58.331 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604570135
+2025-09-23 08:46:58.331 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:53:03.414 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604974587
+2025-09-23 08:53:03.417 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:53:05.618 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604974587
+2025-09-23 08:53:05.618 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:53:10.198 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758604969831
+2025-09-23 08:53:10.200 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:56:20.912 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758605168804
+2025-09-23 08:56:20.914 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:56:22.229 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758605165862
+2025-09-23 08:56:22.231 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets
+2025-09-23 08:56:24.883 [AWT-EventQueue-0] INFO  level - Level 0 started - User: Player_1758605168804
+2025-09-23 08:56:24.883 [AWT-EventQueue-0] INFO  level - Level started - Number: 1, Name: Network Foundation, Description: Learn the basics of network routing with simple square and triangle packets

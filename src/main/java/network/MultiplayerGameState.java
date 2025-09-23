@@ -34,6 +34,7 @@ public class MultiplayerGameState {
     private final Random random;
     private final Gson gson;
     private final ControllableSystemManager controllableSystemManager;
+    private boolean ready = false;
 
     public MultiplayerGameState(String gameId) {
         this.gameId = gameId;
@@ -68,6 +69,9 @@ public class MultiplayerGameState {
 
         PlayerData player = new PlayerData(playerId, macAddress);
         players.put(playerId, player);
+        if (players.size() == 2){
+            ready = true;
+        }
         playerConnections.put(playerId, new ArrayList<>());
         playerReadyStatus.put(playerId, false);
         playerPacketCounts.put(playerId, 0);
@@ -92,7 +96,7 @@ public class MultiplayerGameState {
     }
 
     public boolean allPlayersReady() {
-        return players.size() == 2 &&
+        return ready &&
                playerReadyStatus.values().stream().allMatch(Boolean::booleanValue);
     }
 

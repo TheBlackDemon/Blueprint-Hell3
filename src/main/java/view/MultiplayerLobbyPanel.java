@@ -160,9 +160,37 @@ public class MultiplayerLobbyPanel extends JPanel {
     }
     
     private void startMultiplayerGame(String gameId) {
-        JOptionPane.showMessageDialog(this,
-            "Multiplayer game would start here with game ID: " + gameId,
-            "Multiplayer Game", JOptionPane.INFORMATION_MESSAGE);
+        AudioManager.playSound("themeSong");
+        LevelManager levelManager = LevelManager.getInstance();
+        levelManager.initializeGame(client.getUser());
+        GameState state = levelManager.startLevel(1);
+        if (state == null) {
+            JOptionPane.showMessageDialog(this,
+                    "Failed to start level for multiplayer game.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        IWireLengthManager wireLengthManager = new WireLengthManager(state.getConnections());
+        IPacketManager packetManager = new PacketManager(state);
+        IConnectionValidator validator = new ConnectionValidator();
+
+        MultiplayerGameState mpState = new MultiplayerGameState(gameId);
+
+        MultiplayerGamePanel panel = new MultiplayerGamePanel(
+                client,
+                true,
+                state,
+                wireLengthManager,
+                packetManager,
+                validator,
+                mpState,
+                client,
+                playerId
+        );
+
+        Window.getMainFrame().setContentPane(panel);
+        Window.getMainFrame().revalidate();
     }
 
 

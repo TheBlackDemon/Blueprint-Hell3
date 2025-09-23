@@ -69,7 +69,7 @@ public class MainScreen extends JPanel implements ActionListener, NetworkStatusP
         setting.addActionListener(this);
         this.add(setting);
 
-        multiPlayer = new JButton("Start Last Game");
+        multiPlayer = new JButton("online game");
         multiPlayer.setFocusable(false);
         multiPlayer.setBounds(300, 405, 200, 40);
         multiPlayer.addActionListener(this);

@@ -203,8 +203,32 @@ public class ClientMain {
             case HEARTBEAT -> handleHeartbeat(message);
             case ERROR -> handleError(message);
             case GAME_LIST -> handleGameList(message);
+            case CREATE_GAME -> handleCreateGame(message);
             case JOIN_GAME -> handleJoinGame(message);
+            case PLAYER_READY -> handlePlayerReady(message);
             default -> System.out.println("Unknown message type: " + message.getType());
+        }
+    }
+    private void handleCreateGame(NetworkMessage message){
+        String gameId = message.getData();
+        if (multiplayerLobbyPanel != null){
+            multiplayerLobbyPanel.handleGameCreated(gameId);
+        }
+    }
+    private void handlePlayerReady(NetworkMessage message){
+        try {
+            String data = message.getData();
+            String[] parts = data != null ? data.split(":") : new String[0];
+            if (parts.length >= 2) {
+                String readyPlayerId = parts[0];
+                boolean isReady = Boolean.parseBoolean(parts[1]) || "ready".equalsIgnoreCase(parts[1]);
+                java.awt.Component content = Window.getMainFrame() != null ? Window.getMainFrame().getContentPane() : null;
+                if (content instanceof view.MultiplayerGamePanel panel) {
+                    javax.swing.SwingUtilities.invokeLater(() -> panel.onPlayerReady(readyPlayerId, isReady));
+                }
+            }
+        } catch (Exception ex) {
+            System.err.println("Error handling PLAYER_READY: " + ex.getMessage());
         }
     }
     private void handleJoinGame(NetworkMessage message){
